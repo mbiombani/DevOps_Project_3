@@ -10,9 +10,12 @@ pipeline {
                  '''
                   withAWS(region:'us-east-2') {
     // do something
-}
-                s3Upload(file:'file.txt', bucket:'my-bucket', path:'path/to/target/file.txt')
-s3Upload(file:'someFolder', bucket:'my-bucket', path:'path/to/targetFolder/')
+}s3Upload( 
+  bucket: 'BUCKET', 
+  path: "PATH_TO_FOLDER", // no trailing slash 
+  file: "FOLDER", 
+  workingDir: "PARENT_OF_FOLDER" 
+)
              }
          }
        }
