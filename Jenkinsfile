@@ -11,7 +11,7 @@ pipeline {
 withAWS(region:'us-east-2') {
     // do something
 }
-s3Upload(bucket:"my-bucket", path:'path/to/targetFolder/', includePathPattern:'**/*', workingDir:'dist', excludePathPattern:'**/*.html')
+s3Upload bucket: 'public-assets',path:'public/',file:'index.html',contentType:"text/html"
 
              }
          }
