@@ -13,6 +13,7 @@ withAWS(region:'us-east-2') {
 }
 s3Upload bucket: 'public-assets',path:'public/',file:'index.html',contentType:"text/html"
 
+
              }
          }
        }
