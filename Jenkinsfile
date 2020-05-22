@@ -11,8 +11,8 @@ pipeline {
 withAWS(credentials:'IDofAwsCredentials') {
     // do something
 }
-s3Upload(file:'index.html', bucket:'my-bucket', path:'path/to/target/index.html')
-s3Upload(file:'someFolder', bucket:'my-bucket', path:'path/to/targetFolder/')
+s3Upload(bucket:"my-bucket", path:'path/to/targetFolder/', includePathPattern:'**/*', workingDir:'dist', excludePathPattern:'**/*.svg,**/*.jpg')
+
              }
          }
        }
