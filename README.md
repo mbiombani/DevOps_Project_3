@@ -1,0 +1,2 @@
+# statique
+Projet CI/CD
