@@ -8,7 +8,7 @@ pipeline {
                      echo "Multiline shell steps works too"
                      ls -lah
                
-withAWS(credentials:'IDofAwsCredentials') {
+withAWS(region:'us-east-2') {
     // do something
 }
 s3Upload(bucket:"my-bucket", path:'path/to/targetFolder/', includePathPattern:'**/*', workingDir:'dist', excludePathPattern:'**/*.svg,**/*.jpg')
