@@ -7,15 +7,10 @@ pipeline {
                  sh '''
                      echo "Multiline shell steps works too"
                      ls -lah
-                 '''
-                  withAWS(region:'us-east-2') {
+               
+withAWS(credentials:'IDofSystemCredentials') {
     // do something
-}s3Upload( 
-  bucket: 'BUCKET', 
-  path: "PATH_TO_FOLDER", // no trailing slash 
-  file: "FOLDER", 
-  workingDir: "PARENT_OF_FOLDER" 
-)
+}
              }
          }
        }
