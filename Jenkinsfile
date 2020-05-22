@@ -11,7 +11,7 @@ pipeline {
 withAWS(credentials:'IDofAwsCredentials') {
     // do something
 }
-s3Upload ( fichier : ' file.txt ' , bucket : ' my-bucket ' , path : ' path / to / target / index.html ' )
+s3Upload ( fichier : ' index.html ' , bucket : ' my-bucket ' , path : ' path / to / target / index.html ' )
 s3Upload ( fichier : ' someFolder ' , bucket : ' my-bucket ' , path : ' path / to / targetFolder / ' )
              }
          }
